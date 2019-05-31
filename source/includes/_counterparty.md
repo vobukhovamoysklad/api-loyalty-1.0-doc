@@ -1,0 +1,177 @@
+# Сущности
+
+## Покупатель
+
+### Создание покупателя
+
+Запрос на создание нового покупателя.
+
+#### Атрибуты сущности
++ **retailStore** `object` `required`
+    + **meta** `object` `required`
+        + **href** `string`  - Идентификатор точки продаж `required`
+        + **id** `string` - Идентификатор точки продаж `required`
+    + **name** - Название точки продаж
++ **meta** `object` `required`
+    + **href** `string` - Идентификатор покупателя `required`
+    + **id** `string` - Идентификатор покупателя `required`
++ **name**`string` - ФИО покупателя 
++ **discountCardNumber** `string` - Номер дисконтной карты
++ **phone** `string` - Номер телефона в произвольном формате
++ **email** `string` - Почтовый адрес
+
+> **`POST`** 
+> http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty
+
+> **Request**
+
+> Headers
+
+```
+Content-Type:application/json
+Lognex-Discount-API-Auth-Token:Токен авторизации
+```
+
+> Body
+
+```json
+{
+  "retailStore": {
+    "meta": {
+      "href": "https://online.moysklad.ru/api/remap/1.1/entity/retailstore/2b5eb22f-139e-11e6-9464-e4de00000073",
+      "id": "2b5eb22f-139e-11e6-9464-e4de00000073"
+    },
+    "name": "Магазин №1"
+  },
+  "meta": {
+    "href": "https://online.moysklad.ru/api/remap/1.1/entity/counterparty/276a6f50-7ffd-11e6-8a84-bae50000005",
+    "id": "276a6f50-7ffd-11e6-8a84-bae50000005"
+  },
+  "name": "Иванов Иван Иванович",
+  "discountCardNumber": "MTIzNDU2Nzg5MA",
+  "phone": "+7 555 123 4567",
+  "email": "email@example.com"
+}
+```
+
+> **Response**  
+> 201
+
+### Поиск покупателя 
+
+Запрос на поиск существующего покупателя.
+
+#### Параметры
+| Параметр | Описание   |
+|---|---|
+| search | `string` `required` *Example: 9039993344* Строка с поисковым запросом |
+
+#### Атрибуты сущности
++ **rows** `array` - Список покупателей
+    + Данные о покупателе `object`
+        + **id** `string` - Уникальный идентификатор покупателя в системе лояльности в формате GUID `required`
+        + **name** `string` - ФИО покупателя `required`
+        + **discountCardNumber** `string` - Номер дисконтной карты 
+        + **phone** `string` - Номер телефона в произвольном формате 
+        + **email** `string` - Почтовый адрес
+
+> **`GET`** 
+> http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty?search=9039993344
+
+> **Request**
+
+> Headers
+
+```
+Content-Type:application/json
+Lognex-Discount-API-Auth-Token:Токен авторизации
+```
+
+> **Response**  
+> 200 (application/json)
+
+```json
+{
+  "rows": [
+    {
+      "id": "2b5eb22f-139e-11e6-9464-e4de00000073",
+      "name": "Иванов Иван Иванович",
+      "discountCardNumber": "MTIzNDU2Nzg5MA",
+      "phone": "+7 555 123 4567",
+      "email": "email@example.com"
+    }
+  ]
+}
+```
+
+### Получение баланса баллов покупателя 
+
+Запрос на получение баланса покупателя. Поиск и идентификация покупателя идет по идентификатору покупателя `id` из метаданных.
+Прочие реквизиты несут информационный характер и могут не предаваться. Передача нескольких покупателей в ответе **не допускается**.
+
+
+#### Атрибуты сущности   
+
++ **retailStore** `object` `required`
+    + **meta** `object` `required`
+        + **href**  `string` - Идентификатор точки продаж `required`
+        + **id** `string` - Идентификатор точки продаж `required`
+    + **name** `string` - Магазин №1 - Название точки продаж
++ **meta** `object` `required`
+    + **href** `string` - Идентификатор покупателя `required`
+    + **id** `string` - Идентификатор покупателя `required`
++ **name** `string` - ФИО покупателя 
++ **discountCardNumber** `string` - Номер скидочной карты/счета
++ **phone** `string` - Номер телефона в произвольном формате
++ **email** `string` -  Почтовый адрес  
+
+#### Атрибуты ответа  
++ **bonusProgram** `object` - Блок информации по баллам 
+    + **agentBonusBalance** `number` - Баланс баллов покупателя до продажи (текущий баланс)`required`
+
+> **`GET`** 
+> http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty/detail
+
+> **Request**
+
+> Headers
+
+```
+Content-Type:application/json
+Lognex-Discount-API-Auth-Token:Токен авторизации
+```
+
+> Body
+
+```json
+{
+  "retailStore": {
+    "meta": {
+      "href": "https://online.moysklad.ru/api/remap/1.1/entity/retailstore/2b5eb22f-139e-11e6-9464-e4de00000073",
+      "id": "2b5eb22f-139e-11e6-9464-e4de00000073"
+    },
+    "name": "Магазин №1"
+  },
+  "meta": {
+    "href": "https://online.moysklad.ru/api/remap/1.1/entity/counterparty/276a6f50-7ffd-11e6-8a84-bae50000005",
+    "id": "276a6f50-7ffd-11e6-8a84-bae50000005"
+  },
+  "name": "Иванов Иван Иванович",
+  "discountCardNumber": "MTIzNDU2Nzg5MA",
+  "phone": "+7 555 123 4567",
+  "email": "email@example.com"
+}
+```
+> **Response**  
+> 200 (application/json)
+
+
+> Body
+
+```json
+{
+  "bonusProgram": {
+    "agentBonusBalance": 500
+  }
+}
+```
