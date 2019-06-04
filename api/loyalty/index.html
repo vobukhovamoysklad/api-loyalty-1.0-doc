@@ -1,0 +1,1051 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">cURL</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li class="toc-list-h1-title">
+            <a href="" class="toc-h1 toc-link" data-title="МойСклад LoyaltyAPI">МойСклад LoyaltyAPI</a>
+              <li>
+                <a href="#scenarij-raboty" class="toc-h2 toc-link" data-title="Сценарий работы">Сценарий работы</a>
+              </li>
+              <li>
+                <a href="#obrabotka-oshibok" class="toc-h2 toc-link" data-title="Обработка ошибок">Обработка ошибок</a>
+                  <ul class="toc-list-h3">
+                      <li>
+                        <a href="#struktura-oshibok" class="toc-h3 toc-link" data-title="МойСклад LoyaltyAPI">СТРУКТУРА ОШИБОК</a>
+                      </li>
+                      <li>
+                        <a href="#struktura-ob-ekta-error" class="toc-h3 toc-link" data-title="МойСклад LoyaltyAPI">СТРУКТУРА ОБЪЕКТА ERROR</a>
+                      </li>
+                  </ul>
+              </li>
+          </li>
+          <li class="toc-list-h1-title">
+            <a href="" class="toc-h1 toc-link" data-title="Сущности">Сущности</a>
+              <li>
+                <a href="#pokupatel" class="toc-h2 toc-link" data-title="Покупатель">Покупатель</a>
+                  <ul class="toc-list-h3">
+                      <li>
+                        <a href="#sozdanie-pokupatelq" class="toc-h3 toc-link" data-title="Сущности">Создание покупателя</a>
+                      </li>
+                      <li>
+                        <a href="#poisk-pokupatelq" class="toc-h3 toc-link" data-title="Сущности">Поиск покупателя</a>
+                      </li>
+                      <li>
+                        <a href="#poluchenie-balansa-ballow-pokupatelq" class="toc-h3 toc-link" data-title="Сущности">Получение баланса баллов покупателя</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a href="#prodazha" class="toc-h2 toc-link" data-title="Продажа">Продажа</a>
+                  <ul class="toc-list-h3">
+                      <li>
+                        <a href="#raschet-skidok-dlq-prodazhi" class="toc-h3 toc-link" data-title="Сущности">Расчет скидок для продажи</a>
+                      </li>
+                      <li>
+                        <a href="#sozdanie-prodazhi" class="toc-h3 toc-link" data-title="Сущности">Создание продажи</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                <a href="#vozwrat" class="toc-h2 toc-link" data-title="Возврат">Возврат</a>
+                  <ul class="toc-list-h3">
+                      <li>
+                        <a href="#sozdanie-wozwrata" class="toc-h3 toc-link" data-title="Сущности">Создание возврата</a>
+                      </li>
+                  </ul>
+              </li>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://moysklad.github.io/'>Workbook API</a></li>
+            <li><a href='https://github.com/moysklad/api-loyalty-1.0-doc/issues'>Сообщите об ошибке</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='mojsklad-loyaltyapi'>МойСклад LoyaltyAPI</h1>
+<p>API для интеграции МоегоСклада с системами лояльности.</p>
+<h2 id='scenarij-raboty'>Сценарий работы</h2>
+<p>Предваритаельные условия:
+- Пользователь на стороне МоегоСклада указывает <strong>базовый адрес системы лояльности</strong> и <strong>ключ доступа</strong>.
+- Пользователь на стороне системы лояльности указывает логин и пароль для доступа к МоемуСкладу.
+- Система лояльности через <a href="https://online.moysklad.ru/api/remap/1.1/doc/index.html">JSON API</a> запрашивают всю необходимую информацию для настройки скидок (информация о покупателях, товарах, магазинах и т.д.).
+- В настройках приложения лояльности на стороне МоегоСклада может быть выбран способ поиска покупателей: внутренний (в МоемСкладе) или внешний (в системе лояльности)</p>
+
+<p>После всех настроек МойСклад может производить к системе лояльности следующие запросы:
+- Создание покупателя
+- Поиск покупателя
+- Запрос баланса баллов покупателя
+- Расчет скидок для продажи
+- Создание продажи
+- Создание возврата</p>
+
+<p>Запросы осуществляются на определенный эндпоинт относительно базового адреса. Каждый из запросов содержит в своем составе ключ доступа.</p>
+<h2 id='obrabotka-oshibok'>Обработка ошибок</h2>
+<p>Если вознникла ошибка при обработке запроса, то она должна приходить с HTTP кодом, отличным от 200 и 201</p>
+<h3 id='struktura-oshibok'>СТРУКТУРА ОШИБОК</h3>
+<p>Ошибки представляют собой массив <strong>errors</strong>, содержащий объекты <strong>error</strong>, каждый из которых описывает отдельную ошибку.</p>
+<h3 id='struktura-ob-ekta-error'>СТРУКТУРА ОБЪЕКТА ERROR</h3>
+<ul>
+<li><code>error</code> - Заголовок ошибки</li>
+<li><code>parameter</code> - Параметр, на котором произошла ошибка</li>
+<li><code>code</code> - Код ошибки</li>
+<li><code>error_message</code> - Сообщение, прилагаемое к ошибке.</li>
+</ul>
+<h1 id='suschnosti'>Сущности</h1><h2 id='pokupatel'>Покупатель</h2><h3 id='sozdanie-pokupatelq'>Создание покупателя</h3>
+<p>Запрос на создание нового покупателя.</p>
+<h4 id='atributy-suschnosti'>Атрибуты сущности</h4>
+<ul>
+<li><strong>retailStore</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code>  - Идентификатор точки продаж <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор точки продаж <code>required</code></li>
+</ul></li>
+<li><strong>name</strong> - Название точки продаж</li>
+</ul></li>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор покупателя <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор покупателя <code>required</code></li>
+</ul></li>
+<li><strong>name</strong><code>string</code> - ФИО покупателя </li>
+<li><strong>discountCardNumber</strong> <code>string</code> - Номер дисконтной карты</li>
+<li><strong>phone</strong> <code>string</code> - Номер телефона в произвольном формате</li>
+<li><strong>email</strong> <code>string</code> - Почтовый адрес</li>
+</ul>
+
+<blockquote>
+<p><strong><code>POST</code></strong> 
+http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty</p>
+
+<p><strong>Request</strong></p>
+
+<p>Headers</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Content-Type:application/json
+Lognex-Discount-API-Auth-Token:Токен авторизации
+</code></pre>
+<blockquote>
+<p>Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"retailStore"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/retailstore/2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Магазин №1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/counterparty/276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Иванов Иван Иванович"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"discountCardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MTIzNDU2Nzg5MA"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+7 555 123 4567"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@example.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p><strong>Response</strong><br>
+201</p>
+</blockquote>
+<h3 id='poisk-pokupatelq'>Поиск покупателя</h3>
+<p>Запрос на поиск существующего покупателя.</p>
+<h4 id='parametry'>Параметры</h4>
+<table><thead>
+<tr>
+<th>Параметр</th>
+<th>Описание</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>search</td>
+<td><code>string</code> <code>required</code> <em>Example: 9039993344</em> Строка с поисковым запросом</td>
+</tr>
+</tbody></table>
+<h4 id='atributy-suschnosti-2'>Атрибуты сущности</h4>
+<ul>
+<li><strong>rows</strong> <code>array</code> - Список покупателей
+
+<ul>
+<li>Данные о покупателе <code>object</code>
+
+<ul>
+<li><strong>id</strong> <code>string</code> - Уникальный идентификатор покупателя в системе лояльности в формате GUID <code>required</code></li>
+<li><strong>name</strong> <code>string</code> - ФИО покупателя <code>required</code></li>
+<li><strong>discountCardNumber</strong> <code>string</code> - Номер дисконтной карты </li>
+<li><strong>phone</strong> <code>string</code> - Номер телефона в произвольном формате </li>
+<li><strong>email</strong> <code>string</code> - Почтовый адрес</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p><strong><code>GET</code></strong> 
+http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty?search=9039993344</p>
+
+<p><strong>Request</strong></p>
+
+<p>Headers</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Content-Type:application/json
+Lognex-Discount-API-Auth-Token:Токен авторизации
+</code></pre>
+<blockquote>
+<p><strong>Response</strong><br>
+200 (application/json)</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"rows"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Иванов Иван Иванович"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discountCardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MTIzNDU2Nzg5MA"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+7 555 123 4567"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@example.com"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='poluchenie-balansa-ballow-pokupatelq'>Получение баланса баллов покупателя</h3>
+<p>Запрос на получение баланса покупателя. Поиск и идентификация покупателя идет по идентификатору покупателя <code>id</code> из метаданных.
+Прочие реквизиты несут информационный характер и могут не предаваться. Передача нескольких покупателей в ответе <strong>не допускается</strong>.</p>
+<h4 id='atributy-suschnosti-3'>Атрибуты сущности</h4>
+<ul>
+<li><strong>retailStore</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>href</strong>  <code>string</code> - Идентификатор точки продаж <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор точки продаж <code>required</code></li>
+</ul></li>
+<li><strong>name</strong> <code>string</code> - Магазин №1 - Название точки продаж</li>
+</ul></li>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор покупателя <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор покупателя <code>required</code></li>
+</ul></li>
+<li><strong>name</strong> <code>string</code> - ФИО покупателя </li>
+<li><strong>discountCardNumber</strong> <code>string</code> - Номер скидочной карты/счета</li>
+<li><strong>phone</strong> <code>string</code> - Номер телефона в произвольном формате</li>
+<li><strong>email</strong> <code>string</code> -  Почтовый адрес<br></li>
+</ul>
+<h4 id='atributy-otweta'>Атрибуты ответа</h4>
+<ul>
+<li><strong>bonusProgram</strong> <code>object</code> - Блок информации по баллам 
+
+<ul>
+<li><strong>agentBonusBalance</strong> <code>number</code> - Баланс баллов покупателя до продажи (текущий баланс)<code>required</code></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p><strong><code>GET</code></strong> 
+http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty/detail</p>
+
+<p><strong>Request</strong></p>
+
+<p>Headers</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Content-Type:application/json
+Lognex-Discount-API-Auth-Token:Токен авторизации
+</code></pre>
+<blockquote>
+<p>Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"retailStore"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/retailstore/2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Магазин №1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/counterparty/276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Иванов Иван Иванович"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"discountCardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MTIzNDU2Nzg5MA"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+7 555 123 4567"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@example.com"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p><strong>Response</strong><br>
+200 (application/json)</p>
+
+<p>Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"bonusProgram"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"agentBonusBalance"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='prodazha'>Продажа</h2><h3 id='raschet-skidok-dlq-prodazhi'>Расчет скидок для продажи</h3>
+<p>Запрос на пересчет скидок для операции продажи. В запросе передается продажа без применения скидок. В ответе ожидается продажа со всеми примененными скидками. В случае округления суммы чека, допускается разбиение одной позии на две.</p>
+
+<p>Если проишло разбиение позиции, то необходимо учитывать значение в поле sn (серийные номера). Правило следующее - кол-во серийных номеров изначальной позиции совпадает с кол-вом серийных номеров в позициях, получившихся в результате разбиения. Так же, кол-во серийных номеров должно быть равно кол-ву товара (поле quantity).</p>
+
+<p>После расчета скидок, приложение уже никак не меняет состав чека и не применяет другие скидки.</p>
+<h4 id='atributy-suschnosti'>Атрибуты сущности</h4>
+<ul>
+<li><strong>retailStore</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор точки продаж <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор точки продаж <code>required</code></li>
+</ul></li>
+<li><strong>name</strong> <code>string</code> - Название точки продаж</li>
+</ul></li>
+<li><strong>agent</strong> <code>object</code> - Реквизиты покупателя в формате метаданных<code>required</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор покупателя<code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор покупателя<code>required</code></li>
+</ul></li>
+<li><strong>name</strong> <code>string</code> - ФИО покупателя </li>
+<li><strong>discountCardNumber</strong> <code>string</code> - Номер скидочной карты/счета</li>
+<li><strong>phone</strong> <code>string</code> - Номер телефона в произвольном формате </li>
+<li><strong>email</strong> <code>string</code> - Почтовый адрес </li>
+</ul></li>
+<li><strong>positions</strong> <code>array</code> - Перечень всех позиций чека
+
+<ul>
+<li><code>object</code>
+
+<ul>
+<li><strong>assortment</strong> <code>object</code> - Реквизиты позиции в формате метаданных<code>required</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code>`<code>required</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор товара/услуги <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор товара/услуги <code>required</code></li>
+</ul></li>
+</ul></li>
+<li><strong>quantity</strong> <code>number</code> - Количество в чеке (3 зн. после запятой) <code>required</code></li>
+<li><strong>price</strong> <code>number</code> - Цена за единицу (2 зн. после запятой) <code>required</code></li>
+<li><strong>sn</strong> <code>array</code> - Список серийных номеров в формате метаданных 
+
+<ul>
+<li><code>object</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li></li>
+<li></li>
+</ul></li>
+<li><strong>name</strong> <code>string</code> - Серийный номер <code>string</code> </li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><strong>bonusProgram</strong> <code>object</code> - Блок информации по баллам <code>object</code> 
+
+<ul>
+<li><strong>transactionType</strong> <code>enum[string]</code> - Тип операции с баллами (начисление - EARNING, списание - SPENDING) 
+
+<ul>
+<li>Default: EARNING</li>
+<li>Members 
+
+<ul>
+<li>EARNING</li>
+<li>SPENDING<br></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id='atributy-otweta'>Атрибуты ответа</h4>
+<ul>
+<li><strong>agent</strong> <code>object</code> - Реквизиты покупателя в формате метаданных <code>required</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>href</strong>: <code>string</code> - Идентификатор покупателя <code>required</code></li>
+<li><strong>id</strong>: <code>string</code> - Идентификатор покупателя <code>required</code></li>
+</ul></li>
+<li><strong>name</strong>: <code>string</code> - ФИО покупателя</li>
+<li><strong>discountCardNumber</strong>: <code>string</code> - Номер скидочной карты/счета</li>
+<li><strong>phone</strong>: <code>string</code> - Номер телефона в произвольном формате</li>
+<li><strong>email</strong>: <code>string</code> - Почтовый адрес<br></li>
+</ul></li>
+<li><strong>positions</strong> <code>array</code> - Перечень всех позиций чека
+
+<ul>
+<li><code>object</code>
+
+<ul>
+<li><strong>assortment</strong> <code>object</code> - Реквизиты позиции в формате метаданных <code>required</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>href</strong>: <code>string</code> - Идентификатор товара/услуги <code>required</code></li>
+<li><strong>id</strong>: <code>string</code> - Идентификатор товара/услуги <code>required</code></li>
+</ul></li>
+</ul></li>
+<li><strong>quantity</strong>: <code>number</code> - Количество в чеке (3 зн. после запятой) <code>required</code></li>
+<li><strong>price</strong>: <code>number</code> - Цена за единицу (2 зн. после запятой) <code>required</code></li>
+<li><strong>discountPercent</strong>: <code>number</code> - Процент скидки (2 зн. после запятой). от 0 до 100 <code>required</code></li>
+<li><strong>discountedPrice</strong>: <code>number</code> - Цена с учетом скидки (2 зн. после запятой) <code>required</code></li>
+<li><strong>sn</strong> <code>array</code> - Коллекция уникальных идентификаторов серийных номеров в формате метаданных. Если массив не пуст, то количество товаров в позиции (quantity) должно быть равно количеству серийных номеров, переданных в значении атрибута
+
+<ul>
+<li><code>object</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li></li>
+<li></li>
+</ul></li>
+<li><strong>name</strong>: <code>string</code> - Серийный номер</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><strong>bonusProgram</strong> <code>object</code> - Блок информации по баллам
+
+<ul>
+<li><strong>transactionType</strong>: <code>enum[string]</code> - Тип операции с баллами (начисление - EARNING, списание - SPENDING)
+
+<ul>
+<li>Default: EARNING</li>
+<li>Members 
+
+<ul>
+<li>EARNING</li>
+<li>SPENDING</li>
+</ul></li>
+</ul></li>
+<li><strong>agentBonusBalance</strong>: <code>number</code> - Баланс баллов покупателя до продажи</li>
+<li><strong>bonusValueToSpend</strong>: <code>number</code> - Сколько может быть списано баллов за продажу</li>
+<li><strong>bonusValueToEarn</strong>: <code>number</code> - Сколько может быть начислено баллов за продажу</li>
+<li><strong>agentBonusBalanceAfter</strong>: <code>number</code> - Баланс баллов покупателя после продажи</li>
+<li><strong>paidByBonusPoints</strong>: <code>number</code> - Сумма оплаченная бонусами (2 зн. после запятой)</li>
+<li><strong>receiptExtraInfo</strong>: <code>string</code> - Дополнительный текст для вывода в чеке, может содержать переносы строк.</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p><strong><code>POST</code></strong> 
+http://example.com/baseurl/api/moysklad/loyalty/1.0/retaildemand/recalc</p>
+
+<p><strong>Request</strong></p>
+
+<p>Headers</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Content-Type:application/json
+Lognex-Discount-API-Auth-Token:Токен авторизации
+</code></pre>
+<blockquote>
+<p>Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"retailStore"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/retailstore/2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Магазин №1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/counterparty/276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Иванов Иван Иванович"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"discountCardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MTIzNDU2Nzg5MA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+7 555 123 4567"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@example.com"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"assortment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/product/9c56720c-e8a7-4fdc-aea4-7104f28207be"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9c56720c-e8a7-4fdc-aea4-7104f28207be"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mf">123.456</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">123.45</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sn"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/thing/2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7895545"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"bonusProgram"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"transactionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EARNING"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p><strong>Response</strong><br>
+200 (application/json)</p>
+
+<p>Headers</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Content-Type:application/json
+</code></pre>
+<blockquote>
+<p>Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/counterparty/276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Иванов Иван Иванович"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"discountCardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MTIzNDU2Nzg5MA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+7 555 123 4567"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@example.com"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"assortment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/product/9c56720c-e8a7-4fdc-aea4-7104f28207be"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9c56720c-e8a7-4fdc-aea4-7104f28207be"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mf">123.456</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">123.45</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discountPercent"</span><span class="p">:</span><span class="w"> </span><span class="mf">49.99</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discountedPrice"</span><span class="p">:</span><span class="w"> </span><span class="mf">62.95</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sn"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/thing/2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7895545"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"bonusProgram"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"transactionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EARNING"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"agentBonusBalance"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bonusValueToSpend"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bonusValueToEarn"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"agentBonusBalanceAfter"</span><span class="p">:</span><span class="w"> </span><span class="mi">650</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"paidByBonusPoints"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"receiptExtraInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Спасибо за участие в нашей программе!"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='sozdanie-prodazhi'>Создание продажи</h3>
+<p>Запрос на создание новой продажи. Если при продаже начислялись или списывались баллы, информация об этом указывается в секции <code>bonusProgram</code></p>
+<h4 id='atributy-suschnosti-2'>Атрибуты сущности</h4>
+<ul>
+<li><strong>retailStore</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code>- Идентификатор точки продаж <code>required</code></li>
+<li><strong>id</strong>: <code>string</code> - Идентификатор точки продаж <code>required</code></li>
+</ul></li>
+<li><strong>name</strong> <code>string</code> - Название точки продаж</li>
+</ul></li>
+<li><strong>name</strong> <code>string</code> - Номер продажи</li>
+<li><strong>moment</strong> <code>string</code> - Дата продажи</li>
+<li><strong>meta</strong> <code>object</code> - Реквизиты продажи в формате метаданных <code>required</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор продажи (URL) <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор продажи <code>required</code></li>
+</ul></li>
+<li><strong>agent</strong> <code>object</code> - Реквизиты покупателя в формате метаданных
+
+<ul>
+<li><strong>meta</strong> <code>object</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор покупателя <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор покупателя <code>required</code></li>
+</ul></li>
+<li><strong>name</strong> <code>string</code> - ФИО покупателя</li>
+<li><strong>discountCardNumber</strong> <code>string</code> - Номер скидочной карты/счета</li>
+<li><strong>phone</strong> <code>string</code> - Номер телефона в произвольном формате</li>
+<li><strong>email</strong> <code>string</code> - Почтовый адрес</li>
+</ul></li>
+<li><strong>positions</strong> <code>array</code> - Перечень всех позиций чека
+
+<ul>
+<li><code>object</code>
+
+<ul>
+<li><strong>assortment</strong> <code>object</code> - Реквизиты позиции в формате метаданных
+
+<ul>
+<li><strong>meta</strong> <code>object</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор товара/услуги <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор товара/услуги <code>required</code></li>
+</ul></li>
+</ul></li>
+<li><strong>quantity</strong> <code>number</code> - Количество в чеке (3 зн. после запятой)</li>
+<li><strong>price</strong> <code>number</code> - Цена за единицу (2 зн. после запятой)</li>
+<li><strong>discountPercent</strong> <code>number</code> - Процент скидки (2 зн. после запятой)</li>
+<li><strong>discountedPrice</strong> <code>number</code> - Цена с учетом скидки (2 зн. после запятой)</li>
+</ul></li>
+</ul></li>
+<li><strong>bonusProgram</strong> <code>object</code> - Блок информации по баллам
+
+<ul>
+<li><strong>bonusValueToSpend</strong> <code>number</code> - Сколько может быть списано баллов за продажу</li>
+<li><strong>bonusValueToEarn</strong> <code>number</code> - Сколько может быть начислено баллов за продажу</li>
+</ul></li>
+<li><strong>cashSum</strong> <code>number</code> - Оплачено наличными</li>
+<li><strong>noCashSum</strong> <code>number</code> - Оплачено картой</li>
+</ul>
+
+<blockquote>
+<p><strong><code>POST</code></strong> 
+http://example.com/baseurl/api/moysklad/loyalty/1.0/retaildemand</p>
+
+<p><strong>Request</strong></p>
+
+<p>Headers</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Content-Type:application/json
+Lognex-Discount-API-Auth-Token:Токен авторизации
+</code></pre>
+<blockquote>
+<p>Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"retailStore"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/retailstore/2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Магазин №1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00001"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"moment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-18 15:06:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/counterparty/276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"276a6f50-7ffd-11e6-8a84-bae50000005"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Иванов Иван Иванович"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"discountCardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MTIzNDU2Nzg5MA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+7 555 123 4567"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@example.com"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"assortment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/product/9c56720c-e8a7-4fdc-aea4-7104f28207be"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9c56720c-e8a7-4fdc-aea4-7104f28207be"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mf">123.456</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">123.45</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discountPercent"</span><span class="p">:</span><span class="w"> </span><span class="mf">49.99</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discountedPrice"</span><span class="p">:</span><span class="w"> </span><span class="mf">62.95</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"bonusProgram"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"bonusValueToSpend"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bonusValueToEarn"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"cashSum"</span><span class="p">:</span><span class="w"> </span><span class="mf">62.95</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"noCashSum"</span><span class="p">:</span><span class="w"> </span><span class="mf">283.1</span><span class="w">
+</span><span class="p">}</span><span class="w"> 
+</span></code></pre>
+<blockquote>
+<p><strong>Response</strong><br>
+201</p>
+</blockquote>
+<h2 id='vozwrat'>Возврат</h2><h3 id='sozdanie-wozwrata'>Создание возврата</h3>
+<p>Запрос на создание нового возврата. В составе запроса может быть указана ссылка на документ продажи. Операции с баллами в составе возврата не передаются.
+Система лояльности, на основании информации из связанной продажи, самостоятельно начисляет/списывает баллы при необходимости.</p>
+<h4 id='atributy-suschnosti'>Атрибуты сущности</h4>
+<ul>
+<li><strong>retailStore</strong> <code>object</code> <code>required</code>
+
+<ul>
+<li><strong>meta</strong> <code>object</code>
+
+<ul>
+<li><strong>href</strong>: <code>string</code> - Идентификатор точки продаж <code>required</code></li>
+<li><strong>id</strong>: <code>string - Идентификатор точки продаж</code>required`</li>
+</ul></li>
+<li><strong>name</strong>: <code>string</code> - Название точки продаж</li>
+</ul></li>
+<li><strong>name</strong>: <code>string</code> Номер возврата</li>
+<li><strong>moment</strong>: <code>string</code> Дата возврата</li>
+<li><strong>meta</strong> <code>object</code> - Реквизиты возврата в формате метаданных <code>required</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор возврата (URL) <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор возврата <code>required</code></li>
+</ul></li>
+<li><strong>demand</strong> <code>object</code> - Реквизиты продажи в формате метаданных
+
+<ul>
+<li><strong>meta</strong> <code>object</code>
+
+<ul>
+<li><strong>href</strong> <code>string</code> - Идентификатор продажи (URL) <code>required</code></li>
+<li><strong>id</strong> <code>string</code> required) - Идентификатор продажи <code>required</code></li>
+</ul></li>
+</ul></li>
+<li><strong>agent</strong> <code>object</code> - Реквизиты покупателя в формате метаданных
+    + <strong>meta</strong> <code>object</code>
+        + <strong>href</strong>: <code>string</code> - Идентификатор покупателя <code>required</code>
+        + <strong>id</strong>: <code>string</code> - Идентификатор покупателя <code>required</code>
+    + <strong>name</strong>: <code>string</code> - ФИО покупателя
+    + <strong>discountCardNumber</strong>: <code>string</code> - Номер скидочной карты/счета
+    + <strong>phone</strong>: <code>string</code> - Номер телефона в произвольном формате
+    + <strong>email</strong>: <code>string</code> - Почтовый адрес</li>
+<li><strong>positions</strong> <code>array</code> - Перечень всех позиций чека
+
+<ul>
+<li><code>object</code>
+
+<ul>
+<li><strong>assortment</strong> <code>object</code> - Реквизиты позиции в формате метаданных
+
+<ul>
+<li><strong>meta</strong> <code>object</code>
+
+<ul>
+<li><strong>href</strong>: <code>string</code> - Идентификатор товара/услуги <code>required</code></li>
+<li><strong>id</strong>: <code>string</code> - Идентификатор товара/услуги <code>required</code></li>
+</ul></li>
+</ul></li>
+<li><strong>quantity</strong>: <code>number</code> - Количество в чеке (3 зн. после запятой)</li>
+<li><strong>price</strong>: <code>number</code> - Цена за единицу (2 зн. после запятой)</li>
+<li><strong>discountPercent</strong>: <code>number</code> - Процент скидки (2 зн. после запятой)</li>
+<li><strong>discountedPrice</strong>: <code>number</code> - Цена с учетом скидки (2 зн. после запятой)</li>
+</ul></li>
+</ul></li>
+<li><strong>cashSum</strong>: <code>number</code> - Возвращено наличными</li>
+<li><strong>noCashSum</strong>: <code>number</code> - Возвращено картой</li>
+</ul>
+
+<blockquote>
+<p><strong><code>POST</code></strong> 
+http://example.com/baseurl/api/moysklad/loyalty/1.0/retailsalesreturn</p>
+
+<p><strong>Request</strong></p>
+
+<p>Headers</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Content-Type:application/json
+Lognex-Discount-API-Auth-Token:Токен авторизации
+</code></pre>
+<blockquote>
+<p>Body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"retailStore"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/retailstore/2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2b5eb22f-139e-11e6-9464-e4de00000073"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Магазин №1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00001"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"moment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-04-27 15:43:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"demand"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"positions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"assortment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://online.moysklad.ru/api/remap/1.1/entity/product/9c56720c-e8a7-4fdc-aea4-7104f28207be"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9c56720c-e8a7-4fdc-aea4-7104f28207be"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mf">123.456</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">123.45</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discountPercent"</span><span class="p">:</span><span class="w"> </span><span class="mf">49.99</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"discountedPrice"</span><span class="p">:</span><span class="w"> </span><span class="mf">62.95</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"cashSum"</span><span class="p">:</span><span class="w"> </span><span class="mf">62.95</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"noCashSum"</span><span class="p">:</span><span class="w"> </span><span class="mf">283.1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p><strong>Response</strong><br>
+201</p>
+</blockquote>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">cURL</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
