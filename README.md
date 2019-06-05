@@ -4,7 +4,7 @@
 _Чтобы локально развернуть копию документации:_
 
 1. Установить docker CE и docker-compose, следуя инструкциям на https://docs.docker.com/ для своей ОС
-2. Склонировать репозиторий `https://github.com/moysklad/doc.git`
+2. Склонировать репозиторий `https://github.com/moysklad/api-loyalty-1.0-doc.git`
 3. В командной строке, перейдите в папку репозитория.
 4. Выполните команды `docker-compose build` `docker-compose up`
 
