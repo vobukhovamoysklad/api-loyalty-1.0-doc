@@ -544,9 +544,6 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 <li><strong>positions</strong> <code>array</code> - Перечень всех позиций чека
 
 <ul>
-<li>Позиция <code>object</code>
-
-<ul>
 <li><strong>assortment</strong> <code>object</code> - Реквизиты позиции в формате метаданных<code>required</code>
 
 <ul>
@@ -559,21 +556,16 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 </ul></li>
 <li><strong>quantity</strong> <code>number</code> - Количество в чеке (3 зн. после запятой) <code>required</code></li>
 <li><strong>price</strong> <code>number</code> - Цена за единицу (2 зн. после запятой) <code>required</code></li>
-<li><strong>sn</strong> <code>array</code> - Список серийных номеров в формате метаданных 
-
-<ul>
-<li>Серийный номер <code>object</code>
+<li><strong>sn</strong> <code>array</code> - Список серийных номеров в формате метаданных
 
 <ul>
 <li><strong>meta</strong> <code>object</code> <code>required</code>
 
 <ul>
-<li></li>
-<li></li>
+<li><strong>href</strong> <code>string</code> - Идентификатор серийного номера  <code>required</code></li>
+<li><strong>id</strong> <code>string</code> - Идентификатор серийного номера <code>required</code></li>
 </ul></li>
 <li><strong>name</strong> <code>string</code> - Серийный номер <code>string</code> </li>
-</ul></li>
-</ul></li>
 </ul></li>
 </ul></li>
 <li><strong>bonusProgram</strong> <code>object</code> - Блок информации по баллам <code>object</code> 
@@ -611,9 +603,6 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 <li><strong>positions</strong> <code>array</code> - Перечень всех позиций чека
 
 <ul>
-<li>Позиция <code>object</code>
-
-<ul>
 <li><strong>assortment</strong> <code>object</code> - Реквизиты позиции в формате метаданных <code>required</code>
 
 <ul>
@@ -631,18 +620,13 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 <li><strong>sn</strong> <code>array</code> - Коллекция уникальных идентификаторов серийных номеров в формате метаданных. Если массив не пуст, то количество товаров в позиции (quantity) должно быть равно количеству серийных номеров, переданных в значении атрибута
 
 <ul>
-<li><code>object</code>
-
-<ul>
 <li><strong>meta</strong> <code>object</code> <code>required</code>
 
 <ul>
-<li></li>
-<li></li>
+<li><strong>href</strong>: <code>string</code> - Идентификатор серийного номера <code>required</code></li>
+<li><strong>id</strong>: <code>string</code> - Идентификатор серийного номера <code>required</code></li>
 </ul></li>
 <li><strong>name</strong>: <code>string</code> - Серийный номер</li>
-</ul></li>
-</ul></li>
 </ul></li>
 </ul></li>
 <li><strong>bonusProgram</strong> <code>object</code> - Блок информации по баллам
@@ -821,9 +805,6 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 <li><strong>positions</strong> <code>array</code> - Перечень всех позиций чека
 
 <ul>
-<li>Позиция <code>object</code>
-
-<ul>
 <li><strong>assortment</strong> <code>object</code> - Реквизиты позиции в формате метаданных
 
 <ul>
@@ -838,7 +819,6 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 <li><strong>price</strong> <code>number</code> - Цена за единицу (2 зн. после запятой)</li>
 <li><strong>discountPercent</strong> <code>number</code> - Процент скидки (2 зн. после запятой)</li>
 <li><strong>discountedPrice</strong> <code>number</code> - Цена с учетом скидки (2 зн. после запятой)</li>
-</ul></li>
 </ul></li>
 <li><strong>bonusProgram</strong> <code>object</code> - Блок информации по баллам
 
@@ -949,17 +929,20 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 </ul></li>
 </ul></li>
 <li><strong>agent</strong> <code>object</code> - Реквизиты покупателя в формате метаданных
-    + <strong>meta</strong> <code>object</code>
-        + <strong>href</strong>: <code>string</code> - Идентификатор покупателя <code>required</code>
-        + <strong>id</strong>: <code>string</code> - Идентификатор покупателя <code>required</code>
-    + <strong>name</strong>: <code>string</code> - ФИО покупателя
-    + <strong>discountCardNumber</strong>: <code>string</code> - Номер скидочной карты/счета
-    + <strong>phone</strong>: <code>string</code> - Номер телефона в произвольном формате
-    + <strong>email</strong>: <code>string</code> - Почтовый адрес</li>
-<li><strong>positions</strong> <code>array</code> - Перечень всех позиций чека
 
 <ul>
-<li>Позиция <code>object</code>
+<li><strong>meta</strong> <code>object</code>
+
+<ul>
+<li><strong>href</strong>: <code>string</code> - Идентификатор покупателя <code>required</code></li>
+<li><strong>id</strong>: <code>string</code> - Идентификатор покупателя <code>required</code></li>
+</ul></li>
+<li><strong>name</strong>: <code>string</code> - ФИО покупателя</li>
+<li><strong>discountCardNumber</strong>: <code>string</code> - Номер скидочной карты/счета</li>
+<li><strong>phone</strong>: <code>string</code> - Номер телефона в произвольном формате</li>
+<li><strong>email</strong>: <code>string</code> - Почтовый адрес</li>
+</ul></li>
+<li><strong>positions</strong> <code>array</code> - Перечень всех позиций чека
 
 <ul>
 <li><strong>assortment</strong> <code>object</code> - Реквизиты позиции в формате метаданных
@@ -976,7 +959,6 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 <li><strong>price</strong>: <code>number</code> - Цена за единицу (2 зн. после запятой)</li>
 <li><strong>discountPercent</strong>: <code>number</code> - Процент скидки (2 зн. после запятой)</li>
 <li><strong>discountedPrice</strong>: <code>number</code> - Цена с учетом скидки (2 зн. после запятой)</li>
-</ul></li>
 </ul></li>
 <li><strong>cashSum</strong>: <code>number</code> - Возвращено наличными</li>
 <li><strong>noCashSum</strong>: <code>number</code> - Возвращено картой</li>
