@@ -22,23 +22,22 @@
         + **href** `string` - Идентификатор продажи (URL) `required`
         + **id** `string` required) - Идентификатор продажи `required`
 + **agent** `object` - Реквизиты покупателя в формате метаданных
-        + **meta** `object`
-            + **href**: `string` - Идентификатор покупателя `required`
-            + **id**: `string` - Идентификатор покупателя `required`
-        + **name**: `string` - ФИО покупателя
-        + **discountCardNumber**: `string` - Номер скидочной карты/счета
-        + **phone**: `string` - Номер телефона в произвольном формате
-        + **email**: `string` - Почтовый адрес
+    + **meta** `object`
+        + **href**: `string` - Идентификатор покупателя `required`
+        + **id**: `string` - Идентификатор покупателя `required`
+    + **name**: `string` - ФИО покупателя
+    + **discountCardNumber**: `string` - Номер скидочной карты/счета
+    + **phone**: `string` - Номер телефона в произвольном формате
+    + **email**: `string` - Почтовый адрес
 + **positions** `array` - Перечень всех позиций чека
-    + Позиция `object`
-        + **assortment** `object` - Реквизиты позиции в формате метаданных
-            + **meta** `object`
-                + **href**: `string` - Идентификатор товара/услуги `required`
-                + **id**: `string` - Идентификатор товара/услуги `required`
-        + **quantity**: `number` - Количество в чеке (3 зн. после запятой)
-        + **price**: `number` - Цена за единицу (2 зн. после запятой)
-        + **discountPercent**: `number` - Процент скидки (2 зн. после запятой)
-        + **discountedPrice**: `number` - Цена с учетом скидки (2 зн. после запятой)
+    + **assortment** `object` - Реквизиты позиции в формате метаданных
+        + **meta** `object`
+            + **href**: `string` - Идентификатор товара/услуги `required`
+            + **id**: `string` - Идентификатор товара/услуги `required`
+    + **quantity**: `number` - Количество в чеке (3 зн. после запятой)
+    + **price**: `number` - Цена за единицу (2 зн. после запятой)
+    + **discountPercent**: `number` - Процент скидки (2 зн. после запятой)
+    + **discountedPrice**: `number` - Цена с учетом скидки (2 зн. после запятой)
 + **cashSum**: `number` - Возвращено наличными
 + **noCashSum**: `number` - Возвращено картой
 
