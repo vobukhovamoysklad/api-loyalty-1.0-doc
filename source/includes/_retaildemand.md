@@ -23,19 +23,17 @@
     + **phone** `string` - Номер телефона в произвольном формате 
     + **email** `string` - Почтовый адрес 
 + **positions** `array` - Перечень всех позиций чека
-    + Позиция `object`
-        + **assortment** `object` - Реквизиты позиции в формате метаданных`required`
-            + **meta** `object```required`
-                + **href** `string` - Идентификатор товара/услуги `required`
-                + **id** `string` - Идентификатор товара/услуги `required`
-        + **quantity** `number` - Количество в чеке (3 зн. после запятой) `required`
-        + **price** `number` - Цена за единицу (2 зн. после запятой) `required`
-        + **sn** `array` - Список серийных номеров в формате метаданных 
-            + Серийный номер `object`
-                + **meta** `object` `required`
-                    * **href** `string` - Идентификатор серийного номера  `required`
-                    * **id** `string` - Идентификатор серийного номера `required`
-                + **name** `string` - Серийный номер `string` 
+    + **assortment** `object` - Реквизиты позиции в формате метаданных`required`
+        + **meta** `object```required`
+            + **href** `string` - Идентификатор товара/услуги `required`
+            + **id** `string` - Идентификатор товара/услуги `required`
+    + **quantity** `number` - Количество в чеке (3 зн. после запятой) `required`
+    + **price** `number` - Цена за единицу (2 зн. после запятой) `required`
+    + **sn** `array` - Список серийных номеров в формате метаданных
+          + **meta** `object` `required`
+              + **href** `string` - Идентификатор серийного номера  `required`
+              + **id** `string` - Идентификатор серийного номера `required`
+          + **name** `string` - Серийный номер `string` 
 + **bonusProgram** `object` - Блок информации по баллам `object` 
     + **transactionType** `enum[string]` - Тип операции с баллами (начисление - EARNING, списание - SPENDING) 
         + Default: EARNING
@@ -54,21 +52,19 @@
     + **phone**: `string` - Номер телефона в произвольном формате
     + **email**: `string` - Почтовый адрес  
 + **positions** `array` - Перечень всех позиций чека
-    + Позиция `object`
-        + **assortment** `object` - Реквизиты позиции в формате метаданных `required`
-            + **meta** `object` `required`
-                + **href**: `string` - Идентификатор товара/услуги `required`
-                + **id**: `string` - Идентификатор товара/услуги `required`
-        + **quantity**: `number` - Количество в чеке (3 зн. после запятой) `required`
-        + **price**: `number` - Цена за единицу (2 зн. после запятой) `required`
-        + **discountPercent**: `number` - Процент скидки (2 зн. после запятой). от 0 до 100 `required`
-        + **discountedPrice**: `number` - Цена с учетом скидки (2 зн. после запятой) `required`
-        + **sn** `array` - Коллекция уникальных идентификаторов серийных номеров в формате метаданных. Если массив не пуст, то количество товаров в позиции (quantity) должно быть равно количеству серийных номеров, переданных в значении атрибута
-            + `object`
-                + **meta** `object` `required`
-                    + **href**: `string` - Идентификатор серийного номера `required`
-                    + **id**: `string` - Идентификатор серийного номера `required`
-                + **name**: `string` - Серийный номер
+    + **assortment** `object` - Реквизиты позиции в формате метаданных `required`
+        + **meta** `object` `required`
+            + **href**: `string` - Идентификатор товара/услуги `required`
+            + **id**: `string` - Идентификатор товара/услуги `required`
+    + **quantity**: `number` - Количество в чеке (3 зн. после запятой) `required`
+    + **price**: `number` - Цена за единицу (2 зн. после запятой) `required`
+    + **discountPercent**: `number` - Процент скидки (2 зн. после запятой). от 0 до 100 `required`
+    + **discountedPrice**: `number` - Цена с учетом скидки (2 зн. после запятой) `required`
+    + **sn** `array` - Коллекция уникальных идентификаторов серийных номеров в формате метаданных. Если массив не пуст, то количество товаров в позиции (quantity) должно быть равно количеству серийных номеров, переданных в значении атрибута
+          + **meta** `object` `required`
+              + **href**: `string` - Идентификатор серийного номера `required`
+              + **id**: `string` - Идентификатор серийного номера `required`
+          + **name**: `string` - Серийный номер
 + **bonusProgram** `object` - Блок информации по баллам
     + **transactionType**: `enum[string]` - Тип операции с баллами (начисление - EARNING, списание - SPENDING)
         + Default: EARNING
@@ -225,15 +221,14 @@ Content-Type:application/json
     + **phone** `string` - Номер телефона в произвольном формате
     + **email** `string` - Почтовый адрес
 + **positions** `array` - Перечень всех позиций чека
-    + Позиция `object`
-        + **assortment** `object` - Реквизиты позиции в формате метаданных
-            + **meta** `object`
-                + **href** `string` - Идентификатор товара/услуги `required`
-                + **id** `string` - Идентификатор товара/услуги `required`
-        + **quantity** `number` - Количество в чеке (3 зн. после запятой)
-        + **price** `number` - Цена за единицу (2 зн. после запятой)
-        + **discountPercent** `number` - Процент скидки (2 зн. после запятой)
-        + **discountedPrice** `number` - Цена с учетом скидки (2 зн. после запятой)
+    + **assortment** `object` - Реквизиты позиции в формате метаданных
+        + **meta** `object`
+            + **href** `string` - Идентификатор товара/услуги `required`
+            + **id** `string` - Идентификатор товара/услуги `required`
+    + **quantity** `number` - Количество в чеке (3 зн. после запятой)
+    + **price** `number` - Цена за единицу (2 зн. после запятой)
+    + **discountPercent** `number` - Процент скидки (2 зн. после запятой)
+    + **discountedPrice** `number` - Цена с учетом скидки (2 зн. после запятой)
 + **bonusProgram** `object` - Блок информации по баллам
     + **bonusValueToSpend** `number` - Сколько может быть списано баллов за продажу
     + **bonusValueToEarn** `number` - Сколько может быть начислено баллов за продажу
