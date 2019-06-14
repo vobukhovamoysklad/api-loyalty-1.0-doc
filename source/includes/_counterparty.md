@@ -11,7 +11,7 @@
     + **meta** `object` `required`
         + **href** `string`  - Идентификатор точки продаж `required`
         + **id** `string` - Идентификатор точки продаж `required`
-    + **name** - Название точки продаж
+    + **name** `string` - Название точки продаж
 + **meta** `object` `required`
     + **href** `string` - Идентификатор покупателя `required`
     + **id** `string` - Идентификатор покупателя `required`
@@ -64,11 +64,11 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 #### Параметры
 | Параметр | Описание   |
 |---|---|
-| search | `string` `required` *Example: 9039993344* Строка с поисковым запросом |
+| search | `string` *Example: 9039993344* Строка с поисковым запросом |
 
 #### Атрибуты сущности
 + **rows** `array` - Список покупателей
-    + Данные о покупателе `object`
+    + Покупатель `object`
         + **id** `string` - Уникальный идентификатор покупателя в системе лояльности в формате GUID `required`
         + **name** `string` - ФИО покупателя `required`
         + **discountCardNumber** `string` - Номер дисконтной карты 

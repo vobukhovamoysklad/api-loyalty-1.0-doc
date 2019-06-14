@@ -23,7 +23,7 @@
     + **phone** `string` - Номер телефона в произвольном формате 
     + **email** `string` - Почтовый адрес 
 + **positions** `array` - Перечень всех позиций чека
-    + `object`
+    + Позиция `object`
         + **assortment** `object` - Реквизиты позиции в формате метаданных`required`
             + **meta** `object```required`
                 + **href** `string` - Идентификатор товара/услуги `required`
@@ -31,7 +31,7 @@
         + **quantity** `number` - Количество в чеке (3 зн. после запятой) `required`
         + **price** `number` - Цена за единицу (2 зн. после запятой) `required`
         + **sn** `array` - Список серийных номеров в формате метаданных 
-            + `object`
+            + Серийный номер `object`
                 + **meta** `object` `required`
                     + **href** `string` - Идентификатор серийного номера  `required`
                     + **id** `string` - Идентификатор серийного номера `required`
@@ -54,7 +54,7 @@
     + **phone**: `string` - Номер телефона в произвольном формате
     + **email**: `string` - Почтовый адрес  
 + **positions** `array` - Перечень всех позиций чека
-    + `object`
+    + Позиция `object`
         + **assortment** `object` - Реквизиты позиции в формате метаданных `required`
             + **meta** `object` `required`
                 + **href**: `string` - Идентификатор товара/услуги `required`
@@ -225,7 +225,7 @@ Content-Type:application/json
     + **phone** `string` - Номер телефона в произвольном формате
     + **email** `string` - Почтовый адрес
 + **positions** `array` - Перечень всех позиций чека
-    + `object`
+    + Позиция `object`
         + **assortment** `object` - Реквизиты позиции в формате метаданных
             + **meta** `object`
                 + **href** `string` - Идентификатор товара/услуги `required`

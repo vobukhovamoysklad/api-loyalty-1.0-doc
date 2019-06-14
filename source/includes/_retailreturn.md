@@ -30,7 +30,7 @@
         + **phone**: `string` - Номер телефона в произвольном формате
         + **email**: `string` - Почтовый адрес
 + **positions** `array` - Перечень всех позиций чека
-    + `object`
+    + Позиция `object`
         + **assortment** `object` - Реквизиты позиции в формате метаданных
             + **meta** `object`
                 + **href**: `string` - Идентификатор товара/услуги `required`
