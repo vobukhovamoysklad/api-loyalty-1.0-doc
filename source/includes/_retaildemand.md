@@ -33,8 +33,8 @@
         + **sn** `array` - Список серийных номеров в формате метаданных 
             + Серийный номер `object`
                 + **meta** `object` `required`
-                    + **href** `string` - Идентификатор серийного номера  `required`
-                    + **id** `string` - Идентификатор серийного номера `required`
+                    * **href** `string` - Идентификатор серийного номера  `required`
+                    * **id** `string` - Идентификатор серийного номера `required`
                 + **name** `string` - Серийный номер `string` 
 + **bonusProgram** `object` - Блок информации по баллам `object` 
     + **transactionType** `enum[string]` - Тип операции с баллами (начисление - EARNING, списание - SPENDING) 
