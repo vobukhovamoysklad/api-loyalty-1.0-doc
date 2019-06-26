@@ -7,14 +7,14 @@
 Запрос на создание нового покупателя.
 
 #### Атрибуты сущности
-+ **retailStore** `object` `required`
-    + **meta** `object` `required`
-        + **href** `string`  - Идентификатор точки продаж `required`
-        + **id** `string` - Идентификатор точки продаж `required`
++ **retailStore** `object` `Необходимое`
+    + **meta** `object` `Необходимое`
+        + **href** `string`  - Идентификатор точки продаж `Необходимое`
+        + **id** `string` - Идентификатор точки продаж `Необходимое`
     + **name** `string` - Название точки продаж
-+ **meta** `object` `required`
-    + **href** `string` - Идентификатор покупателя `required`
-    + **id** `string` - Идентификатор покупателя `required`
++ **meta** `object` `Необходимое`
+    + **href** `string` - Идентификатор покупателя `Необходимое`
+    + **id** `string` - Идентификатор покупателя `Необходимое`
 + **name**`string` - ФИО покупателя 
 + **discountCardNumber** `string` - Номер дисконтной карты
 + **phone** `string` - Номер телефона в произвольном формате
@@ -69,8 +69,8 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 #### Атрибуты сущности
 + **rows** `array` - Список покупателей
     + Покупатель `object`
-        + **id** `string` - Уникальный идентификатор покупателя в системе лояльности в формате GUID `required`
-        + **name** `string` - ФИО покупателя `required`
+        + **id** `string` - Уникальный идентификатор покупателя в системе лояльности в формате GUID `Необходимое`
+        + **name** `string` - ФИО покупателя `Необходимое`
         + **discountCardNumber** `string` - Номер дисконтной карты 
         + **phone** `string` - Номер телефона в произвольном формате 
         + **email** `string` - Почтовый адрес
@@ -112,14 +112,14 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 
 #### Атрибуты сущности   
 
-+ **retailStore** `object` `required`
-    + **meta** `object` `required`
-        + **href**  `string` - Идентификатор точки продаж `required`
-        + **id** `string` - Идентификатор точки продаж `required`
++ **retailStore** `object` `Необходимое`
+    + **meta** `object` `Необходимое`
+        + **href**  `string` - Идентификатор точки продаж `Необходимое`
+        + **id** `string` - Идентификатор точки продаж `Необходимое`
     + **name** `string` - Магазин №1 - Название точки продаж
-+ **meta** `object` `required`
-    + **href** `string` - Идентификатор покупателя `required`
-    + **id** `string` - Идентификатор покупателя `required`
++ **meta** `object` `Необходимое`
+    + **href** `string` - Идентификатор покупателя `Необходимое`
+    + **id** `string` - Идентификатор покупателя `Необходимое`
 + **name** `string` - ФИО покупателя 
 + **discountCardNumber** `string` - Номер скидочной карты/счета
 + **phone** `string` - Номер телефона в произвольном формате
@@ -127,7 +127,7 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 
 #### Атрибуты ответа  
 + **bonusProgram** `object` - Блок информации по баллам 
-    + **agentBonusBalance** `number` - Баланс баллов покупателя до продажи (текущий баланс)`required`
+    + **agentBonusBalance** `number` - Баланс баллов покупателя до продажи (текущий баланс)`Необходимое`
 
 > **`GET`** 
 > http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty/detail
