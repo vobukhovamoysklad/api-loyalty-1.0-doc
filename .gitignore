@@ -23,3 +23,5 @@ vendor/
 _yardoc
 doc/
 .idea/
+
+deploy_key
