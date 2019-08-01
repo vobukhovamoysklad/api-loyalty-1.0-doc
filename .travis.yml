@@ -1,18 +1,21 @@
 language: ruby
-cache: bundler
+rvm:
+ - 2.5.1
+#cache: bundler
 env:
 - SERVER_IP_ADDRESS=dev.moysklad.ru
+- APP_PREFIX=api-loyalty
 branches:
   only:
   - master
 install: gem install jekyll jekyll-sitemap jekyll-paginate html-proofer jekyll-feed
 script:
-- bundle install
 - jekyll build --destination site
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --quiet site/  app@${SERVER_IP_ADDRESS}:.
+  script: rsync --list-only app@${SERVER_IP_ADDRESS}:./${APP_PREFIX}
+  #-r --delete-after --quiet site/
   on:
     branch: master
 before_install:
