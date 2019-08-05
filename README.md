@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/moysklad/api-loyalty-1.0-doc.svg?branch=master)](https://travis-ci.org/moysklad/api-loyalty-1.0-doc)
+
 Запуск локальной версии документации
 ------------
 
@@ -28,7 +30,7 @@ bundle install
 В папке `source/includes` находятся .md-файлы документации.
 
 ## Оформление нового раздела
- 
+
 Для добавления нового раздела необходимо создать .md-файл в папке `source/includes`. Имя файла должно начинаться с `_`. Для отображения нового раздела в боковом меню в `source/index.html.md` в раздел `includes` нужно прописать название нового раздела (должно совпадать с названием .md-файла).
 
 Пример разметки страницы:
@@ -56,9 +58,9 @@ bundle install
 | --- |:---|
 |parameter |  Описание параметра |
 
-> Получить Сущности 
+> Получить Сущности
 
-> **`GET`** 
+> **`GET`**
 > http://example.com/baseurl/api/moysklad/loyalty/1.0/retaildemand/recalc
 
 > **Request**
@@ -67,7 +69,7 @@ bundle install
 
 > Body
 
-> **Response** 
+> **Response**
 > 200 (application/json)
 
 Успешный запрос. Результат - JSON представление списка Сущностей
