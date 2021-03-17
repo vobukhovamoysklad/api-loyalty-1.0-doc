@@ -40,7 +40,7 @@
         + Members 
             + EARNING
             + SPENDING
-+ **preferredBonusToSpend** `number` - Кол-во бонусных баллов, которые нужно списать
++ **preferredBonusToSpend** `number` - Количество бонусных баллов, которые нужно списать
 
 > **`POST`** 
 > http://example.com/baseurl/api/moysklad/loyalty/1.0/retaildemand/recalc
