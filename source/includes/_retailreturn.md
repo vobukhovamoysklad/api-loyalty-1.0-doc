@@ -43,7 +43,7 @@
 
 
 > **`POST`** 
-> http://example.com/baseurl/api/moysklad/loyalty/1.0/retailsalesreturn
+> /retailsalesreturn
 
 > **Request**
 
