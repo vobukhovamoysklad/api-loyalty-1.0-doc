@@ -39,7 +39,8 @@
         + Default: EARNING
         + Members 
             + EARNING
-            + SPENDING     
+            + SPENDING
++ **preferredBonusToSpend** `number` - Количество бонусных баллов, которые нужно списать
 
 > **`POST`** 
 > /retaildemand/recalc
