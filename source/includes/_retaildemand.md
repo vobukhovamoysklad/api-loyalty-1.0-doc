@@ -43,7 +43,7 @@
 + **preferredBonusToSpend** `number` - Количество бонусных баллов, которые нужно списать
 
 > **`POST`** 
-> http://example.com/baseurl/api/moysklad/loyalty/1.0/retaildemand/recalc
+> /retaildemand/recalc
 
 > **Request**
 
@@ -236,7 +236,7 @@ Content-Type:application/json
 + **noCashSum** `number` - Оплачено картой
 
 > **`POST`** 
-> http://example.com/baseurl/api/moysklad/loyalty/1.0/retaildemand
+> /retaildemand
 
 > **Request**
 

@@ -22,13 +22,8 @@
         + **href** `string` - Идентификатор продажи (URL) `Необходимое`
         + **id** `string` Необходимое) - Идентификатор продажи `Необходимое`
 + **agent** `object` - Реквизиты покупателя в формате метаданных
-    + **meta** `object`
-        + **href**: `string` - Идентификатор покупателя `Необходимое`
-        + **id**: `string` - Идентификатор покупателя `Необходимое`
-    + **name**: `string` - ФИО покупателя
-    + **discountCardNumber**: `string` - Номер скидочной карты/счета
-    + **phone**: `string` - Номер телефона в произвольном формате
-    + **email**: `string` - Почтовый адрес
+    + **href**: `string` - Идентификатор покупателя `Необходимое`
+    + **id**: `string` - Идентификатор покупателя `Необходимое`
 + **positions** `array` - Перечень всех позиций чека
     + **assortment** `object` - Реквизиты позиции в формате метаданных
         + **meta** `object`
@@ -43,7 +38,7 @@
 
 
 > **`POST`** 
-> http://example.com/baseurl/api/moysklad/loyalty/1.0/retailsalesreturn
+> /retailsalesreturn
 
 > **Request**
 

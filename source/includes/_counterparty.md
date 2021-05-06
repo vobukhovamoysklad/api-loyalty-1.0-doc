@@ -21,7 +21,7 @@
 + **email** `string` - Почтовый адрес
 
 > **`POST`** 
-> http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty
+> /counterparty
 
 > **Request**
 
@@ -76,7 +76,7 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
         + **email** `string` - Почтовый адрес
 
 > **`GET`** 
-> http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty?search=9039993344
+> /counterparty?search=9039993344
 
 > **Request**
 
@@ -129,8 +129,8 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 + **bonusProgram** `object` - Блок информации по баллам 
     + **agentBonusBalance** `number` - Баланс баллов покупателя до продажи (текущий баланс)`Необходимое`
 
-> **`GET`** 
-> http://example.com/baseurl/api/moysklad/loyalty/1.0/counterparty/detail
+> **`POST`** 
+> /counterparty/detail
 
 > **Request**
 
