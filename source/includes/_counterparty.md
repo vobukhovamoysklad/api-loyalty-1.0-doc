@@ -70,6 +70,7 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
 + **rows** `array` - Список покупателей
     + Покупатель `object`
         + **id** `string` - Уникальный идентификатор покупателя в системе лояльности в формате GUID `Необходимое`
+        + **msId** `string` - Уникальный идентификатор покупателя в системе МойСклад в формате GUID
         + **name** `string` - ФИО покупателя `Необходимое`
         + **discountCardNumber** `string` - Номер дисконтной карты 
         + **phone** `string` - Номер телефона в произвольном формате 
@@ -95,6 +96,7 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
   "rows": [
     {
       "id": "2b5eb22f-139e-11e6-9464-e4de00000073",
+      "msId": "276a6f50-7ffd-11e6-8a84-bae50000005",
       "name": "Иванов Иван Иванович",
       "discountCardNumber": "MTIzNDU2Nzg5MA",
       "phone": "+7 555 123 4567",
