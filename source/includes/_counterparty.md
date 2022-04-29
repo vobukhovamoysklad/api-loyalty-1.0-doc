@@ -49,7 +49,7 @@ Lognex-Discount-API-Auth-Token:Токен авторизации
   },
   "name": "Иванов Иван Иванович",
   "discountCardNumber": "MTIzNDU2Nzg5MA",
-  "phone": "+7 555 123 4567",
+  "phone": "+7 555 123 4568",
   "email": "email@example.com"
 }
 ```
